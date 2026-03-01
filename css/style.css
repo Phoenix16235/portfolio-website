@@ -1,0 +1,165 @@
+:root {
+    --bg: #f8f9fb;
+    --text: #000;
+}
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/*Nav and Logo */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111;
+    color: white;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease;
+}
+.menu a:hover {
+    transform: translateY(-2px);
+}
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+/*Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 40px;
+    padding: 0 40px;
+}
+.hero .text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 620px;
+}
+.hero .text h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.hero .text h1 .break, .tags .break {
+    display: block;
+}
+.hero .text p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 52ch; /* Keeps paragraph readable */
+
+}
+/*Hero Buttons */
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+.btn {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #111;
+    color: #111;
+    border-radius: 10px;
+}
+/*Hero Image */
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 220px;
+    border-radius: 16px;
+    background: #eef1f6;
+    border: 1px solid #e2e6ee;
+}
+/* Card Section */
+.threecard {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.tags span {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef1f6;
+}
+.card-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+/* Footer */
+footer {
+    text-align: center;
+}
