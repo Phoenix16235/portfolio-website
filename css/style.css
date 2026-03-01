@@ -162,6 +162,10 @@ body {
     gap: 12px;
     margin-top: 16px;
 }
+/* Contact */
+.contact {
+    padding: 80px 40px;
+}
 /* Footer */
 footer {
     text-align: center;
