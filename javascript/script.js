@@ -1,18 +1,42 @@
-// Portfolio JS will go here
-console.log("JS is connected");
+console.log("SCRIPT LOADED ✅");
 
-const primarybutton = document.querySelector(".btn-primary");
-const projectsSection = document.querySelector("#projects");
+const navLinks = document.querySelectorAll(".menu a");
 
-primarybutton.addEventListener("click", function (event) {
+function clearActive() {
+  navLinks.forEach((link) => link.classList.remove("active"));
+}
+
+function setActiveLink(link) {
+  clearActive();
+  link.classList.add("active");
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
     event.preventDefault();
-    projectsSection.scrollIntoView({ behavior: "smooth" });
+
+    const target = link.getAttribute("href"); // "#home", "#about", etc.
+    const section = document.querySelector(target);
+
+    // highlight stays on what you clicked
+    setActiveLink(link);
+
+    // smooth scroll
+    if (section) {
+        setTimeout(() => {
+            section.scrollIntoView({ behavior: "smooth" });
+        }, 350);
+      
+    }
+  });
 });
 
-const contactbutton = document.querySelector(".btn-secondary");
-const contactsSection = document.querySelector("#contact");
-
-contactbutton.addEventListener("click", function (event) {
-    event.preventDefault();
-    contactsSection.scrollIntoView({ behavior: "smooth"});
-});
+// Optional: set active on page load based on URL hash (e.g. /#contact)
+if (window.location.hash) {
+  const initial = document.querySelector(`.menu a[href="${window.location.hash}"]`);
+  if (initial) setActiveLink(initial);
+} else {
+  // default to Home on first load
+  const home = document.querySelector('.menu a[href="#home"]');
+  if (home) setActiveLink(home);
+}

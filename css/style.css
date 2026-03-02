@@ -2,9 +2,6 @@
     --bg: #f8f9fb;
     --text: #000;
 }
-html {
-    scroll-behavior: smooth;
-}
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
@@ -31,9 +28,25 @@ body {
 }
 .menu a {
     display: inline-block;
+    position: relative;
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: width 0.5s ease;
+}
+.menu a.active {
     color: white;
-    transition: transform 0.2s ease;
+}
+.menu a.active::after {
+    width: 100%;
 }
 .menu a:hover {
     transform: translateY(-2px);
@@ -41,6 +54,9 @@ body {
 .logo {
     font-weight: 700;
     letter-spacing: 0.5px;
+}
+section {
+    scroll-margin-top: 90px;
 }
 /*Hero Section */
 .hero {
@@ -118,7 +134,12 @@ body {
     background: #eef1f6;
     border: 1px solid #e2e6ee;
 }
-/* Card Section */
+/* About */
+.about {
+    padding: 80px 40px;
+    min-height: 60vh;
+}
+/* projects */
 .threecard {
     display: flex;
     justify-content: space-between;
@@ -162,9 +183,11 @@ body {
     gap: 12px;
     margin-top: 16px;
 }
+
 /* Contact */
 .contact {
     padding: 80px 40px;
+    min-height: 60vh;
 }
 /* Footer */
 footer {
