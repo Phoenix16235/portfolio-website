@@ -136,8 +136,43 @@ section {
 }
 /* About */
 .about {
-    padding: 80px 40px;
-    min-height: 60vh;
+    padding: 100px 40px;
+}
+.about-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+.about-text {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 18px;
+}
+.about-text h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+.about-text p {
+    margin: 0;
+    line-height: 1.6;
+    max-width: 60ch;
+}
+.about-stats {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+}
+.stat h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.stat p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 /* projects */
 .threecard {
